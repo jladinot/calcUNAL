@@ -9,9 +9,6 @@ function agregarCampo() {
             <input type="number" name="creditos[]" placeholder="Créditos" required min="1" class="creditos">
             <input type="number" name="nota[]" placeholder="Nota" class="Nota" step="0.1" min="0" max="5">
             <div class="action-buttons">
-                <button type="button" class="icon-btn edit-btn" onclick="editarCampo('${id}')">
-                    <i class="fas fa-edit"></i>
-                </button>
                 <button type="button" class="icon-btn delete-btn" onclick="eliminarCampo(this)">
                     <i class="fas fa-times"></i>
                 </button>
