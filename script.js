@@ -79,9 +79,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Obtener y actualizar el elemento resultado
         const resultadoElement = document.getElementById("resultado");
-        resultadoElement.innerHTML = `<div class="resultado-content">
+
+        if (pappi > 4){
+            resultadoElement.innerHTML = `<div class="resultado-content">
             <span>Tu pappi de este semestre es: ${pappi}</span>
-        </div>`;
+            </div>`;
+        }
+        else {
+            resultadoElement.innerHTML = `<div class="resultado-content">
+            <span>Échele tierrita a las inscripciones compa, su pappi es de: ${pappi}</span>
+            </div>`;
+        }
+
         
         // Mostrar con animación
         resultadoElement.style.display = 'block';
