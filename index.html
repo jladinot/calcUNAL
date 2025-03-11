@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalcUNAL - Minimalista</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>CalcUNAL</h1>
+        <p class="subtitle">Calculadora de PAPPI</p>
+    </header>
+
+    <form id="myForm" method="GET">
+        <div class="container">
+            <h2 class="container-title">Materias</h2>
+            <div id="campos">
+                <div class="materia-entry" id="materia-inicial">
+                    <div class="input-row">
+                        <input type="text" name="materia[]" placeholder="Nombre de la materia" required>
+                        <input type="number" name="creditos[]" placeholder="Créditos" required min="1" class="creditos">
+                        <input type="number" name="nota[]" placeholder="Nota" class="Nota" step="0.1" min="0" max="5">
+                        <div class="action-buttons">
+                            <button type="button" class="icon-btn edit-btn" onclick="editarCampoInicial()">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button type="button" class="add-btn" onclick="agregarCampo()">
+                <i class="fas fa-plus"></i> Agregar materia
+            </button>
+        </div>
+        
+        <button type="submit" class="submit-btn">Calcular</button>
+    </form>
+
+    <p id="resultado"></p>
+
+    <footer>
+        <p>© 2025 CalcUNAL</p>
+    </footer>
+
+</body>
+</html>
